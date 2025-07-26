@@ -18,15 +18,15 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
-      
-      - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
-
+    
       - name: Remove bootsnap cache
         run: rm -rf tmp/cache
       
       - name: Install dependencies
         run: bundle installgit
+
+      - name: Scan for common Rails security vulnerabilities using static analysis
+        run: bin/brakeman --no-pager
 
   scan_js:
     runs-on: ubuntu-latest
