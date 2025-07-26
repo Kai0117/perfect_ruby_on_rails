@@ -18,12 +18,12 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
-    
-      - name: Remove bootsnap cache
-        run: rm -rf tmp/cache
       
       - name: Install dependencies
-        run: bundle installgit
+        run: bundle install
+
+      - name: Remove bootsnap cache
+        run: rm -rf tmp/cache
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
