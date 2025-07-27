@@ -2,10 +2,12 @@
 
 one:
   name: MyString
+  publisher: MyString
   published_on: 2025-07-19
   price: 1
 
 two:
   name: MyString
+  publisher: MyString
   published_on: 2025-07-19
   price: 1
