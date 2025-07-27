@@ -80,6 +80,9 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+      
+      - name: Remove bootsnap cache
+        run: rm -rf tmp/cache
 
       - name: Run tests
         env:
