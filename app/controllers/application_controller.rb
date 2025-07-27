@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
- # rescue_from LoginFailed, with: :login_failed
+  rescue_from LoginFailed, with: :login_failed
   allow_browser versions: :modern
 
   def login_failed
